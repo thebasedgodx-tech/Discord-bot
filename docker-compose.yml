@@ -1,0 +1,9 @@
+services:
+  bot:
+    build: .
+    container_name: discord-music-bot
+    restart: unless-stopped
+    env_file: .env
+    # Optioneel: limiet zodat de bot je VPS niet opeet
+    mem_limit: 512m
+    cpus: 1.0
